@@ -6,7 +6,11 @@
     <!-- judul website -->
     <title>Web Travel</title>
     <!-- icon web -->
-    <link rel="shortcut icon" href="./assets/img/plane-line.svg" type="image/x-icon"/>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/plane-line.svg"
+      type="image/x-icon"
+    />
     <!-- link css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- link aos -->
@@ -32,7 +36,7 @@
 
     <!-- membuat home start -->
     <section class="layout home" id="home">
-      <div class="content" data-aos="fade-right" data-aos-duration="1000">
+      <div class="content" data-aos="fade-up" data-aos-duration="1000">
         <h1 class="judul-home">
           Start your journey by one click, explore the beautiful world
         </h1>
@@ -46,11 +50,7 @@
           <a class="button-home secondary" href="#contact">Get in Touch</a>
         </div>
       </div>
-      <div
-        class="image-container"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-      >
+      <div class="image-container" data-aos="fade-up" data-aos-duration="1000">
         <img
           src="./assets/img/Traveling-rafiki.svg"
           alt="Travel Illustration"
@@ -68,7 +68,7 @@
       </div>
 
       <div class="cards-container">
-        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
           <img src="./assets/img/1.jpg" alt="Destination 1" />
           <div class="card__content">
             <p class="card__title">Bali, Indonesia</p>
@@ -90,7 +90,7 @@
           </div>
         </div>
 
-        <div class="card" data-aos="fade-left" data-aos-duration="1000">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
           <img src="./assets/img/3.jpg" alt="Destination 3" />
           <div class="card__content">
             <p class="card__title">Kuala Lumpur, Malaysia</p>
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
           <img src="./assets/img/4.jpg" alt="Destination 4" />
           <div class="card__content">
             <p class="card__title">Maui, Hawaii</p>
@@ -123,11 +123,7 @@
       </div>
 
       <div class="contact-container">
-        <div
-          class="contact-info"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <div class="contact-info" data-aos="fade-up" data-aos-duration="1000">
           <h3>Get in Touch</h3>
           <p>We're here to help you plan your perfect journey</p>
           <div class="contact-details">
@@ -144,7 +140,7 @@
         </div>
 
         <div class="contact-form">
-          <form data-aos="fade-left" data-aos-duration="1000">
+          <form data-aos="fade-up" data-aos-duration="1000">
             <div class="form-group">
               <input type="text" placeholder="Your Name" required />
             </div>
@@ -152,7 +148,15 @@
               <input type="email" placeholder="Your Email" required />
             </div>
             <div class="form-group">
-              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <textarea
+                placeholder="Your Message"
+                rows="5"
+                required
+                style="
+                  resize: none; /* hilangin resize handle */
+                  overflow: auto; /* biar scroll bar muncul kalau teks kepanjangan */
+                "
+              ></textarea>
             </div>
             <button type="submit" class="submit-button">Send Message</button>
           </form>

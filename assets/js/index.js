@@ -40,11 +40,22 @@ if (contactForm) {
 }
 
 // ekesekusi animasi pada AOS
-// AOS.init();
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS with settings that prevent layout shifts
   AOS.init({
     duration: 800,
     easing: "ease-in-out",
-    once: false,
+    once: true,
+    offset: 100,
+    delay: 100,
+    anchorPlacement: "top-bottom",
   });
+
+  // Fix for content jumping when animations are disabled
+  setTimeout(function () {
+    const aosElements = document.querySelectorAll("[data-aos]");
+    aosElements.forEach(function (el) {
+      el.classList.add("aos-init");
+    });
+  }, 100);
 });

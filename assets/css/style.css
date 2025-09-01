@@ -3,11 +3,10 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-
 /* navbar start */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
   color: #333;
   line-height: 1.6;
@@ -242,6 +241,8 @@ section {
   perspective: 1000px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Fix for layout shift during AOS */
+  will-change: transform;
 }
 
 .card img {
@@ -271,6 +272,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  /* Fix for layout shift during AOS */
+  will-change: transform;
 }
 
 .card:hover .card__content {
@@ -335,6 +338,7 @@ section {
 }
 
 .contact-form {
+  width: 100%;
   flex: 1;
   background: white;
   padding: 30px;
@@ -395,16 +399,16 @@ footer {
     text-align: center;
     padding-top: 100px;
   }
-  
+
   .layout.home .content {
     padding-right: 0;
     margin-bottom: 40px;
   }
-  
+
   .button-group {
     justify-content: center;
   }
-  
+
   .contact-container {
     flex-direction: column;
   }
@@ -414,15 +418,15 @@ footer {
   .layout.home .judul-home {
     font-size: 2rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.8rem;
   }
-  
+
   .card {
     height: 300px;
   }
-  
+
   section {
     padding: 60px 5%;
   }
@@ -432,16 +436,16 @@ footer {
   .layout.home .judul-home {
     font-size: 1.7rem;
   }
-  
+
   .button-group {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .card {
     height: 280px;
   }
-  
+
   .card__title {
     font-size: 1.5rem;
   }
