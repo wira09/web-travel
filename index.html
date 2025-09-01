@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- judul website -->
+    <title>Web Travel</title>
+    <!-- icon web -->
+    <link rel="shortcut icon" href="./assets/img/plane-line.svg" type="image/x-icon"/>
+    <!-- link css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- link aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- membuat navbar start -->
+    <nav class="navbar">
+      <div class="container">
+        <!-- menu logo -->
+        <a href="#" class="logo">Web Travel</a>
+        <!-- menu navbar -->
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- membuat togle responsif -->
+        <div class="tombol">&#9776;</div>
+      </div>
+    </nav>
+    <!-- membuat navbar end -->
+
+    <!-- membuat home start -->
+    <section class="layout home" id="home">
+      <div class="content" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="judul-home">
+          Start your journey by one click, explore the beautiful world
+        </h1>
+        <p class="deskripsi-home">
+          Discover amazing destinations around the world with our travel
+          services. We provide the best travel experiences for unforgettable
+          memories.
+        </p>
+        <div class="button-group">
+          <a class="button-home" href="#destinations">Explore Destinations</a>
+          <a class="button-home secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div
+        class="image-container"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+      >
+        <img
+          src="./assets/img/Traveling-rafiki.svg"
+          alt="Travel Illustration"
+          class="hero-image"
+        />
+      </div>
+    </section>
+    <!-- membuat home end -->
+
+    <!-- membuat destinations start -->
+    <section class="destinations" id="destinations">
+      <div class="section-header">
+        <h2>Popular Destinations</h2>
+        <p>Discover our most popular travel destinations</p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+          <img src="./assets/img/1.jpg" alt="Destination 1" />
+          <div class="card__content">
+            <p class="card__title">Bali, Indonesia</p>
+            <p class="card__description">
+              Experience the beauty of tropical beaches, vibrant culture, and
+              spiritual retreats in the Island of Gods.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
+          <img src="./assets/img/2.jpg" alt="Destination 2" />
+          <div class="card__content">
+            <p class="card__title">Singapura, Singapore</p>
+            <p class="card__description">
+              Fall in love with the City of Lights, famous landmarks, exquisite
+              cuisine, and romantic atmosphere.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-left" data-aos-duration="1000">
+          <img src="./assets/img/3.jpg" alt="Destination 3" />
+          <div class="card__content">
+            <p class="card__title">Kuala Lumpur, Malaysia</p>
+            <p class="card__description">
+              Explore ancient temples, traditional tea houses, and beautiful
+              cherry blossoms in this historic city.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" data-aos="fade-right" data-aos-duration="1000">
+          <img src="./assets/img/4.jpg" alt="Destination 4" />
+          <div class="card__content">
+            <p class="card__title">Maui, Hawaii</p>
+            <p class="card__description">
+              Enjoy stunning sunsets, white-washed buildings, and breathtaking
+              views of the Aegean Sea.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- membuat destinations end -->
+
+    <!-- membuat contact start -->
+    <section class="contact" id="contact">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with our travel experts</p>
+      </div>
+
+      <div class="contact-container">
+        <div
+          class="contact-info"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h3>Get in Touch</h3>
+          <p>We're here to help you plan your perfect journey</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <strong>Email:</strong> info@webtravel.com
+            </div>
+            <div class="contact-item">
+              <strong>Phone:</strong> +62 123 456 789
+            </div>
+            <div class="contact-item">
+              <strong>Address:</strong> Travel Street 123, Jakarta, Indonesia
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form data-aos="fade-left" data-aos-duration="1000">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- membuat contact end -->
+
+    <!-- membuat footer start -->
+    <footer>
+      <div style="text-align: center">
+        <p>&copy; 2025 Web Travel. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- membuat footer end -->
+
+    <!-- link js -->
+    <script src="./assets/js/index.js"></script>
+    <!-- link aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
+</html>

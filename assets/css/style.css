@@ -1,0 +1,448 @@
+/* smooth scrolling */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* navbar start */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: white;
+  margin: 0;
+  padding: 20px 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tombol {
+  display: none;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 25px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  padding: 10px 0;
+  color: #2c3e50;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #3498db;
+}
+
+/* menu responsif navbar start */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.aktif {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu li:last-child a {
+    border-bottom: none;
+  }
+
+  .tombol {
+    display: block;
+  }
+}
+/* menu responsif navbar end */
+/* navbar end */
+
+/* membuat home start */
+.layout.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5% 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 90vh;
+}
+
+.layout.home .content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.layout.home .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.layout.home .judul-home {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+.layout.home .deskripsi-home {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #7f8c8d;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* button start */
+.button-home {
+  font-size: 1rem;
+  padding: 0.8em 1.5em;
+  border: transparent;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #3498db;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.button-home:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.button-home.secondary {
+  background: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.button-home.secondary:hover {
+  background: #3498db;
+  color: white;
+}
+
+.button-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+/* button end */
+
+/* membuat home end */
+
+/* section styling */
+section {
+  padding: 80px 5%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* membuat destinations start */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.card {
+  position: relative;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card:hover .card__content {
+  transform: translateY(0);
+}
+
+.card__title {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* membuat destinations end */
+
+/* contact section */
+.contact {
+  background: #f8f9fa;
+}
+
+.contact-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.submit-button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background: #2980b9;
+}
+
+/* footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* responsive design */
+@media screen and (max-width: 992px) {
+  .layout.home {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 100px;
+  }
+  
+  .layout.home .content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .button-group {
+    justify-content: center;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout.home .judul-home {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .card {
+    height: 300px;
+  }
+  
+  section {
+    padding: 60px 5%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .layout.home .judul-home {
+    font-size: 1.7rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    height: 280px;
+  }
+  
+  .card__title {
+    font-size: 1.5rem;
+  }
+}
